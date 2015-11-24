@@ -4,8 +4,17 @@
   line-height: 28px;
 }
 
-button {
+input {
   margin: 10px;
+}
+
+button {
+  margin: 10px 0 20px 10px;
+}
+
+#addBookButton {
+  margin-left: 180px;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
