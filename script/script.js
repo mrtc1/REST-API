@@ -52,21 +52,19 @@ $(document).ready(function () {
         var bookAutor= autorInput.val();
         var bookDesc= descInput.val();
 
+
         if(bookTitle.length>0 && bookAutor.length>0 && bookDesc.length >0){
 
             var newBook ={"name":bookTitle ,"autor":bookAutor, "description":bookDesc};
             var jasonBook=JSON.stringify(newBook);
 
-            $.ajax({
+            $.ajax({//TODO clean inputs
                 url: 'http://api.coderslab.pl/book',
                 type: 'POST',
                 dataType: 'text',
                 data:jasonBook,
                 success: function (text) {
                     loadAllBooks();
-                    titleInput='';
-                    autorInput='';
-                    descInput='';
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('error');
@@ -103,6 +101,7 @@ $(document).ready(function () {
 
     booksDiv.on('click','.infoBtn',function(event){
         var btnParent=$(this).parent();
+        $(this).removeClass('infoBtn');
         $.ajax({
             url: 'http://api.coderslab.pl/book/'+$(this).data('id'),
             type: 'GET',
