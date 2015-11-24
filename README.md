@@ -1,8 +1,9 @@
 # REST-API
 jQuery script working with trial API.
 Functions:
--adding new items
--deleting items
--showing more info
--adding more data to the existing items
--deleting selected data from the items
+<ul>
+<li>adding new items</li>
+<li>deleting items</li>
+<li>displaying more info</li>
+<li>adding more data to the existing items</li>
+<li>deleting selected data from the items</li>
